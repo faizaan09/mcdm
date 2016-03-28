@@ -26,10 +26,10 @@ print "All the alternatives with attribute specific scores are: "
 for i in range(alternativeCount):
 	print Alternatives[i]
 
-scores = [0.0 for i in range(alternativeCount)]
+scores = [1.0 for i in range(alternativeCount)]
 for i in range(3):
 	for j in range(4):
-		scores[i] += Alternatives[i][j]**weights[j]
+		scores[i] *= Alternatives[i][j]**weights[j]
 print "\n\n"
 print "Acording to WPM, the scores of the alternatives are: "
 for i in range(3):
